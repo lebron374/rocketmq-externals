@@ -74,7 +74,7 @@ public class RedisSourceTask extends SourceTask {
             event.entryType(EntryType.UPDATE);
 
             Collection<SourceDataEntry> res = this.kvEntryConverter.kVEntryToDataEntries(event);
-            LOGGER.info("send data entries: {}", res);
+            LOGGER.info("redis send data entries: {}", res);
             return res;
         } catch (InterruptedException e) {
             LOGGER.error("redis task interrupted. {}", e);
